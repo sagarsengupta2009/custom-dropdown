@@ -1,0 +1,29 @@
+<div class="main-container">
+  <div class="dropdown-container">
+    <div class="dropdown">
+      <div class="select" onSe>
+        <span  class="selected">
+          <input class="default-option" [(ngModel)]="selectedOption" disabled>
+        </span>
+        <span *ngIf="!isExpanded" class="material-symbols-outlined">expand_more</span>
+        <span *ngIf="isExpanded" class="material-symbols-outlined">expand_less</span>
+      </div>
+      <ul class="menu">
+        <li (click)="onSelection(i)" *ngFor="let option of optionArr; let i = index">{{option.option}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="main-container">
+  <div class="dropdown-container">
+    <div class="dropdown">
+      <select class="" [(ngModel)]="selectedOption" name="" id="">
+        <option *ngFor="let option of optionArr" value="">{{option.option}}</option>
+      </select>
+    </div>
+  </div>
+</div> -->
+
+
+
